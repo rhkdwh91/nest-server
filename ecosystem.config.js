@@ -2,9 +2,7 @@ module.exports = {
   apps: [
     {
       name: "nest-server",
-      script: "./node_modules/.bin/ts-node ./dist/main",
-      instances: 2,
-      exec_mode: "cluster",
+      script: "./dist/main",
       env: {
         NODE_ENV: "development",
       },
