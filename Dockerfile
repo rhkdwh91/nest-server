@@ -7,7 +7,7 @@ COPY package*.json ./
 RUN npm install
 
 # pm2 설치
-RUN npm install -g pm2 
+#RUN npm install -g pm2 
 
 # 프로덕션을 위한 코드를 빌드하는 경우
 # RUN npm ci --only=production
@@ -17,9 +17,10 @@ RUN npm install -g pm2
 COPY ./ ./
 
 # 아래 포트로 매핑
-EXPOSE 3000
+EXPOSE 4000
 
-RUN npm run build:test
+RUN npm run build:prod
+RUN npm run start:prod
 
 # pm2-runtime으로 실행 
-CMD ["pm2-runtime", "start", "ecosystem.config.js", "--env", "test"]
+# CMD ["pm2-runtime", "start", "ecosystem.config.js", "--env", "test"]
