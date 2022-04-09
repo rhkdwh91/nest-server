@@ -24,7 +24,7 @@ COPY ./ ./
 EXPOSE 4000
 
 RUN npm run build
-RUN npm run start:prod
+#RUN npm run start:prod
 
 # pm2-runtime으로 실행 
 CMD ["pm2-runtime", "start", "ecosystem.config.js", "--env", "prod"]
