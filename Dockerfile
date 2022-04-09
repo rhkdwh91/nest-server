@@ -19,7 +19,7 @@ COPY ./ ./
 # 아래 포트로 매핑
 EXPOSE 4000
 
-RUN npm run build:prod
+RUN npm run build
 RUN npm run start:prod
 
 # pm2-runtime으로 실행 
