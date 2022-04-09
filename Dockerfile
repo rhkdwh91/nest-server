@@ -6,6 +6,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
 RUN npm install -g @nestjs/cli
+RUN prisma generate
 
 # pm2 설치
 #RUN npm install -g pm2 
