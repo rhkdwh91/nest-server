@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["./server"],
+  "exclude": [
+    "node_modules",
+    "test",
+    "dist",
+    "**/*spec.ts",
+    ".next",
+    "pages",
+    "public",
+    "components",
+    "styles"
+  ]
+}
