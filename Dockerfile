@@ -3,8 +3,9 @@ FROM node:16
 # 앱 디렉터리 생성
 WORKDIR /usr/src/app
 
-COPY package*.json ./
-COPY prisma/schema.prisma ./prisma
+ADD . /usr/src/app
+
+#COPY package*.json ./
 RUN npm install
 RUN npm install -g @nestjs/cli
 RUN npx prisma generate
