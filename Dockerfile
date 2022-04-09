@@ -11,7 +11,7 @@ RUN npm install -g @nestjs/cli
 RUN npx prisma generate
 
 # pm2 설치
-#RUN npm install -g pm2 
+RUN npm install -g pm2 
 
 # 프로덕션을 위한 코드를 빌드하는 경우
 # RUN npm ci --only=production
@@ -27,4 +27,4 @@ RUN npm run build
 RUN npm run start:prod
 
 # pm2-runtime으로 실행 
-# CMD ["pm2-runtime", "start", "ecosystem.config.js", "--env", "test"]
+CMD ["pm2-runtime", "start", "ecosystem.config.js", "--env", "prod"]

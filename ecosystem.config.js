@@ -1,10 +1,10 @@
-/** @format */
-
 module.exports = {
   apps: [
     {
-      name: "blog",
-      script: "./node_modules/.bin/ts-node ./src/server.ts",
+      name: "nest-server",
+      script: "./node_modules/.bin/ts-node ./dist/main",
+      instances: 2,
+      exec_mode: "cluster",
       env: {
         NODE_ENV: "development",
       },
