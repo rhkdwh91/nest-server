@@ -14,7 +14,7 @@ RUN npx prisma generate
 
 # 프로덕션을 위한 코드를 빌드하는 경우
 # RUN npm ci --only=production
-# ENV NODE_ENV production
+ENV NODE_ENV production
 
 # dockerfile을 실행하는 경로에서 소스 복사
 COPY ./ ./
