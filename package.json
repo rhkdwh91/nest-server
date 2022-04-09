@@ -6,12 +6,12 @@
     "dev": "cross-env NODE_ENV=development nodemon src/main.ts",
     "dev:node": "cross-env NODE_ENV=development ts-node src/main.ts",
     "prebuild": "rimraf dist",
-    "build": "cross-env NODE_ENV=production nest build",
+    "build": "nest build",
     "build:test": "cross-env NODE_ENV=test nest build",
     "build:prod": "cross-env NODE_ENV=production nest build",
-    "start": "cross-env NODE_ENV=production ts-node dist/main",
-    "start:test": "cross-env NODE_ENV=test nodemon dist/main",
-    "start:prod": "cross-env NODE_ENV=production nodemon dist/main"
+    "start": "ts-node dist/main",
+    "start:test": "cross-env NODE_ENV=test ts-node dist/main",
+    "start:prod": "cross-env NODE_ENV=production ts-node dist/main"
   },
   "dependencies": {
     "@apollo/subgraph": "^0.3.3",
